@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+ images: {
+    domains: ["frontend-test-assignment-api.abz.agency"],
+  },
 };
 
 export default nextConfig;
