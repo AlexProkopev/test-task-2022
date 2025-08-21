@@ -29,6 +29,7 @@ module.exports = {
         background: "#f8f8f8",
         "black-87": "rgba(0, 0, 0, 0.87)",
         secondary: "#00bdd3",
+        'gray-777': "#B4B4B4"
       },
     },
   },

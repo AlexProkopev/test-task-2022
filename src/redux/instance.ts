@@ -1,18 +1,12 @@
+import { User } from "@/types/user";
 import axios from "axios";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-export const instance = axios.create({
-  baseURL: baseUrl,
-});
-
-export const setToken = (token:{success:boolean; token:string}): void => {
-  instance.defaults.headers.common.Authorization = `Bearer ${token.token}`;
-};
 
 export const fetchToken = async (): Promise<string | null> => {
     try {
-        const response = await instance.get("/token");
+        const response = await axios.get(`${baseUrl}token`);
         return response.data.token;
     } catch (error) {
         console.error("Error fetching token:", error);
@@ -20,9 +14,13 @@ export const fetchToken = async (): Promise<string | null> => {
     }
 }
 
-// export const token = await fetchToken();
-// if (token) {
-//   setToken({ success: true, token });
-// }
-
+ export const fetchUsersById = async (id: string): Promise<{success:boolean, user: User} | null> => {
+    try {
+        const response = await axios.get(`${baseUrl}users/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching user by ID:", error);
+        return null;
+    }
+};
 

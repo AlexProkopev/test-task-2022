@@ -7,17 +7,20 @@ import Registration from "@/components/registration/registration";
 export default function Home() {
   return (
     <>
-      <header className="container mx-auto bg-white ">
+      <header className="container mx-auto bg-white">
         <NavBar />
       </header>
-        <Hero />
+      <Hero />
       <main>
         <ReduxProvider>
           <Users />
         </ReduxProvider>
-        <Registration />
       </main>
-      <footer></footer>
+      <footer className="container mx-auto pt-[140px] pb-[100px]" id="sign-up">
+        <ReduxProvider>
+        <Registration />
+      </ReduxProvider>
+      </footer>
     </>
   );
 }
