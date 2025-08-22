@@ -17,7 +17,7 @@ const UserList = ({ userDataCurrent }: UserListProps) => {
   if (isLoading) {
     return (
       <ul className={userListStyles}>
-        {[...Array(3)].map((_, i) => (
+        {[...Array(6)].map((_, i) => (
           <li key={`skeleton-${i}`}>
             <UsersSkeleton />
           </li>
