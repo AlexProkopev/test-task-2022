@@ -9,7 +9,7 @@ type NameFieldInputProps = {
 
 const NameFieldInput = ({register, errors }: NameFieldInputProps) => {
   return (
-    <fieldset className="mx-auto ">
+    <fieldset className="mx-auto">
       <legend className="sr-only">Name</legend>
       <input
         type="text"
