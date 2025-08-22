@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const sectionClass =
   "pt-[40px] w-full h-[500px] bg-[url('/bg-hero-mobile.jpg')] bg-cover bg-center " +
   "md:bg-[url('/bg-hero-tablet.jpg')] md:pt-[89px] " +
@@ -29,9 +31,7 @@ const Hero = () => {
         mind. They should also be excited to learn, as the world of Front-End
         Development keeps evolving.`}
       </p>
-      <button type="button" className={buttonClass}>
-        Sign up
-      </button>
+      <Link href="#sign-up"><button className={buttonClass}>Sign up</button></Link>
     </section>
   );
 };
