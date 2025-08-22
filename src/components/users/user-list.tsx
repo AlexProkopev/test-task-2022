@@ -18,7 +18,9 @@ const UserList = ({ userDataCurrent }: UserListProps) => {
     return (
       <ul className={userListStyles}>
         {[...Array(3)].map((_, i) => (
-          <UsersSkeleton key={`skeleton-${i}`} />
+          <li key={`skeleton-${i}`}>
+            <UsersSkeleton />
+          </li>
         ))}
       </ul>
     );

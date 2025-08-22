@@ -12,9 +12,11 @@ const NavBar = () => {
       <Image src={logoSVG} alt="Logo-test-task" width={104} height={26} />
       <ul className="flex gap-[10px]">
         {content.map((item) => (
-          <Link key={item} href={`#${item.toLowerCase().replace(" ", "-")}`}>
+          <li key={item}>
+            <Link  href={`#${item.toLowerCase().replace(" ", "-")}`}>
             <UserButton label={item} />
           </Link>
+          </li>
         ))}
       </ul>
     </nav>

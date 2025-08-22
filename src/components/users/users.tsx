@@ -16,7 +16,7 @@ const Users = () => {
 
   return (
     <section className="pt-[140px]" id="users">
-      <h3 className={titleStyle}>Working with GET request</h3>
+      <h2 className={titleStyle}>Working with GET request</h2>
       <UserList userDataCurrent={userDataCurrent} />
 
       {!userData || userData.page >= userData.total_pages ? (
