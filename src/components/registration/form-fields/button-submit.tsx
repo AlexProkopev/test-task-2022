@@ -19,7 +19,7 @@ const SubmitButton = ({ isSubmitting, isValid }: SubmitButtonProps) => {
       disabled={!isValid}
       className={`${buttonClass} mt-[54px] ${
         !isValid
-          ? "bg-gray-777 cursor-not-allowed text-white/90"
+          ? "bg-gray-400 cursor-not-allowed text-white/90"
           : "bg-primary"
       }`}
     >

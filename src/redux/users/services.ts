@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { baseUrl, fetchToken, fetchUsersById } from "../instance";
-
 import { UserFormValues } from "@/components/registration/form-schema";
 import { PayloadGetUsers, Position, User, UserReq } from "@/types/user";
 

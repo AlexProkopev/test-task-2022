@@ -5,10 +5,12 @@ interface UserItemProps {
   user: User;
 }
 
-const textStyles = "text-center mt-[20px] text-black-87 text-base font-normal  leading-relaxed truncate";
+const textStyles = "text-center mt-[20px] text-black-87 text-base font-normal  leading-relaxed truncate ";
 const itemStyles = "w-[328px] py-[20px] px-[20px] bg-[#FFFFFF] rounded-[10px] md:w-[344px] lg:w-[282px]"
 
 const UserItem = ({ user }: UserItemProps) => {
+
+
   return (
     <li
       className={itemStyles}

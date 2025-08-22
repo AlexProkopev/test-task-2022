@@ -11,7 +11,6 @@ const buttonStyle = (userData: UserReq | null) =>
     userData && userData.page < userData.total_pages ? "" : "bg-gray-200"
   }`;
 
-
 const Users = () => {
   const { handleLoadMore, userDataCurrent, userData } = UsersHooks();
 
@@ -20,14 +19,18 @@ const Users = () => {
       <h3 className={titleStyle}>Working with GET request</h3>
       <UserList userDataCurrent={userDataCurrent} />
 
-      <button
-        type="button"
-        onClick={handleLoadMore}
-        disabled={!userData || userData.page >= userData.total_pages}
-        className={buttonStyle(userData)}
-      >
-        Load more
-      </button>
+      {!userData || userData.page >= userData.total_pages ? (
+        <p className="text-center text-gray-500 mt-[20px]">No more users to load</p>
+      ) : (
+        <button
+          type="button"
+          onClick={handleLoadMore}
+          disabled={!userData || userData.page >= userData.total_pages}
+          className={buttonStyle(userData)}
+        >
+          Load more
+        </button>
+      )}
     </section>
   );
 };

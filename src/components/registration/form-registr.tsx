@@ -18,6 +18,7 @@ const UserForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isValid },
     watch,
+    reset 
   } = useForm<UserFormValues>({
     resolver: zodResolver(formSchema),
     mode: "all",
@@ -26,7 +27,7 @@ const UserForm = () => {
   const { dataPosition, onSubmit } = RegistrationHooks();
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={formStyles}>
+    <form onSubmit={() => {handleSubmit(onSubmit) ; reset() }} className={formStyles}>
       <fieldset className="space-y-[50px]">
         <legend className="sr-only">Personal information</legend>
         <NameFieldInput register={register} errors={errors} />
